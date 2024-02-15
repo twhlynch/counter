@@ -5,24 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter</title>
     <style>
+        html, body {
+            overflow: hidden;
+        }
         body {
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            height: 100svh;
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
         #counter {
             font-size: 7em;
             text-align: center;
         }
-
         #resetButton {
             font-size: 1.2em;
             padding: 5px 10px;
-            position: absolute;
+            position: fixed;
             top: 20px;
             left: 20px;
             cursor: pointer;
@@ -35,7 +36,6 @@
 <body>
     <div id="counter">0</div>
     <button id="resetButton" onclick="resetCounter()">Reset</button>
-
     <script>
         let count = 0;
         const counterElement = document.getElementById('counter');
